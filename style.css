@@ -238,3 +238,18 @@ img{
     padding:30px;
   }
 }
+
+/* -------- INSTAGRAM SECTION -------- */
+.insta-section{
+  max-width:1100px;
+  margin:60px auto;
+  padding:30px;
+  background:#000814;
+  border:1px solid #0b1d3a;
+}
+
+.insta-frame{
+  width:100%;
+  height:600px;
+  border:none;
+}
