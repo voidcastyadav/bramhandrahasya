@@ -1,56 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta name="robots" content="index, follow">
-<meta name="keywords" content="space mysteries, universe research, cosmic secrets, bramhand rahasya, space science hindi">
-<meta property="og:title" content="Bramhand Rahasya | Cosmic Research Platform">
-<meta property="og:description" content="Exploring space mysteries, universe secrets and future of Earth through research and logic.">
-<meta property="og:type" content="website">
+<head>
 <meta charset="UTF-8">
-<title>Bramhand Rahasya | Cosmic Research & Space Mysteries</title>
+<title>Bramhand Rahasya | Cosmic Research Platform</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Bramhand Rahasya is an independent cosmic research platform exploring space mysteries, universe secrets, and hidden cosmic truths.">
+<meta name="description" content="Bramhand Rahasya is an independent cosmic research platform exploring space mysteries, universe secrets and future of Earth.">
 
-<.main-thumbnail{
-  height:75vh;
-  background:
-    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.85)),
-    url("https://images.unsplash.com/photo-1451187580459-43490279c0fa");
-  background-size:cover;
-  background-position:center;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-}
-
-.thumb-overlay h1{
-  font-size:52px;
-  letter-spacing:4px;
-  color:#ffffff;
-}
-
-.thumb-overlay p{
-  margin-top:10px;
-  font-size:18px;
-  color:#9bb0ff;
-}>
-/* ================= GLOBAL ================= */
+<!-- =================== STYLE =================== -->
+<style>
 *{
   box-sizing:border-box;
 }
-<script>
-let slides = document.querySelectorAll(".slide");
-let index = 0;
 
-setInterval(() => {
-  slides[index].classList.remove("active");
-  index = (index + 1) % slides.length;
-  slides[index].classList.add("active");
-}, 5000); // change slide every 5 sec
-</script>
 body{
   margin:0;
-  font-family:'Segoe UI', sans-serif;
+  font-family:'Segoe UI', Arial, sans-serif;
   color:#ffffff;
   background:
     linear-gradient(rgba(2,6,23,0.92),rgba(2,6,23,0.92)),
@@ -59,7 +23,7 @@ body{
   background-attachment:fixed;
 }
 
-/* ================= HEADER ================= */
+/* ---------- HEADER ---------- */
 header{
   position:sticky;
   top:0;
@@ -70,50 +34,8 @@ header{
   padding:15px 40px;
   background:#000814;
   border-bottom:1px solid #0b1d3a;
-<section class="main-thumbnail">
-  <div class="thumb-overlay">
-    <h1>BRAMHAND RAHASYA</h1>
-    <p>Uncovering the Hidden Truths of the Universe</p>
-  </div>
-</section>
 }
-<section class="hero-slider">
 
-  <!-- SLIDE 1 : Dynamic YouTube Thumbnail -->
-  <div class="slide active" 
-       style="background-image:url('https://img.youtube.com/vi/dQi0KUNTWR4/maxresdefault.jpg');">
-    <div class="overlay">
-      <h1>BRAMHAND RAHASYA</h1>
-      <p>Latest Cosmic Investigation</p>
-      <div class="hero-btns">
-        <a href="https://youtube.com" target="_blank">▶ Watch Video</a>
-        <a href="#research">📘 Read Research</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- SLIDE 2 : Space Wallpaper -->
-  <div class="slide" 
-       style="background-image:url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa');">
-    <div class="overlay">
-      <h1>Exploring the Unknown Universe</h1>
-      <p>Space • Time • Reality</p>
-      <div class="hero-btns">
-        <a href="#videos">🎥 All Videos</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- SLIDE 3 : Mystery Theme -->
-  <div class="slide" 
-       style="background-image:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa');">
-    <div class="overlay">
-      <h1>Hidden Truths of Cosmos</h1>
-      <p>Beyond Human Perception</p>
-    </div>
-  </div>
-
-</section>
 .logo{
   font-size:18px;
   letter-spacing:3px;
@@ -127,27 +49,66 @@ nav a{
   font-size:14px;
 }
 
-/* ================= HERO ================= */
-.hero{
+/* ---------- HERO SLIDER ---------- */
+.hero-slider{
+  position:relative;
+  height:85vh;
+  overflow:hidden;
+}
+
+.slide{
+  position:absolute;
+  inset:0;
+  background-size:cover;
+  background-position:center;
+  opacity:0;
+  transition:opacity 1.2s ease-in-out;
+}
+
+.slide.active{
+  opacity:1;
+}
+
+.overlay{
+  height:100%;
+  background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.85));
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
   text-align:center;
-  padding:140px 20px 120px;
+  padding:20px;
 }
 
-.hero h1{
-  font-size:44px;
-  letter-spacing:1px;
+.overlay h1{
+  font-size:52px;
+  letter-spacing:4px;
 }
 
-.hero p{
+.overlay p{
   margin-top:10px;
-  font-size:16px;
+  font-size:18px;
   color:#9bb0ff;
 }
 
-/* ================= BIG BLOG ================= */
+.hero-btns{
+  margin-top:25px;
+}
+
+.hero-btns a{
+  display:inline-block;
+  margin:0 10px;
+  padding:12px 26px;
+  border:1px solid #5b7cff;
+  color:#fff;
+  text-decoration:none;
+  font-size:14px;
+}
+
+/* ---------- BIG BLOG ---------- */
 .big-blog{
   max-width:1100px;
-  margin:60px auto;
+  margin:70px auto;
   padding:45px;
   background:#000814;
   border:1px solid #0b1d3a;
@@ -165,11 +126,11 @@ nav a{
   font-size:15px;
 }
 
-/* ================= VIDEO SECTION ================= */
+/* ---------- VIDEO GRID ---------- */
 .section-title{
   text-align:center;
-  margin-top:90px;
   font-size:32px;
+  margin-top:80px;
   color:#cfd9ff;
 }
 
@@ -202,15 +163,8 @@ nav a{
   font-size:14px;
   color:#9bb0ff;
 }
-<section class="big-blog">
-  <h2>Research Focus Areas</h2>
 
-  <p><b>2023 –</b> Origins of the Universe & Space-Time</p>
-  <p><b>2024 –</b> Dark Matter, Dark Energy & Unknown Forces</p>
-  <p><b>2025 –</b> Future of Earth & Human Civilization</p>
-  <p><b>2026 –</b> Deep Space Theories & Cosmic Cycles</p>
-</section>
-/* ================= FOOTER ================= */
+/* ---------- FOOTER ---------- */
 footer{
   margin-top:80px;
   text-align:center;
@@ -230,9 +184,9 @@ footer{
   text-decoration:none;
 }
 
-/* ================= MOBILE ================= */
+/* ---------- MOBILE ---------- */
 @media(max-width:600px){
-  .hero h1{font-size:32px;}
+  .overlay h1{font-size:32px;}
   .big-blog{padding:30px;}
 }
 </style>
@@ -250,10 +204,37 @@ footer{
   </nav>
 </header>
 
-<!-- ================= HERO ================= -->
-<section class="hero" id="home">
-  <h1>Exploring the Unknown Universe</h1>
-  <p>Cosmic Mysteries • Space Research • Hidden Truths</p>
+<!-- ================= HERO SLIDER ================= -->
+<section class="hero-slider" id="home">
+
+  <div class="slide active"
+    style="background-image:url('https://img.youtube.com/vi/VIDEO_ID_1/maxresdefault.jpg');">
+    <div class="overlay">
+      <h1>BRAMHAND RAHASYA</h1>
+      <p>Latest Cosmic Investigation</p>
+      <div class="hero-btns">
+        <a href="https://youtube.com" target="_blank">▶ Watch Video</a>
+        <a href="#research">📘 Read Research</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide"
+    style="background-image:url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa');">
+    <div class="overlay">
+      <h1>Exploring the Unknown Universe</h1>
+      <p>Space • Time • Reality</p>
+    </div>
+  </div>
+
+  <div class="slide"
+    style="background-image:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa');">
+    <div class="overlay">
+      <h1>Hidden Truths of Cosmos</h1>
+      <p>Beyond Human Perception</p>
+    </div>
+  </div>
+
 </section>
 
 <!-- ================= BIG BLOG ================= -->
@@ -261,78 +242,53 @@ footer{
   <h2>The Bramhand Rahasya Research Initiative</h2>
 
   <p>
-    Bramhand Rahasya ek independent cosmic research platform hai
-    jo universe ke un pehluon ko explore karta hai jinke answers
-    aaj bhi modern science ke liye incomplete hain. Space sirf
-    planets aur stars ka collection nahi, balki ek complex,
-    evolving aur layered reality hai.
+    Bramhand Rahasya ek independent cosmic research platform hai jo
+    universe ke un pehluon ko explore karta hai jinke answers aaj bhi
+    modern science ke liye incomplete hain.
   </p>
 
   <p>
-    Dark matter aur dark energy jaise concepts ye prove karte hain
-    ki universe ka zyada hissa invisible hai. Space-time distortion,
-    cosmic cycles, multiverse theories aur unknown forces hume
-    batate hain ki reality humare daily perception se kaafi
-    zyada deep aur mysterious hai.
+    Dark matter, dark energy, space-time distortion, multiverse
+    theories aur cosmic cycles ye dikhate hain ki reality humari
+    soch se kaafi zyada deep aur complex hai.
   </p>
 
   <p>
-    Bramhand Rahasya ka approach sensational nahi balki analytical
-    hai. Har topic ko historical data, scientific studies aur
-    logical reasoning ke saath explore kiya jata hai. Yahan hum
-    viral claims ko blindly accept nahi karte, balki unko
-    research ke lens se dekhte hain.
-  </p>
-
-  <p>
-    Is platform par aap dekhenge:
-    <br>• Space aur universe ke deep scientific mysteries  
-    <br>• Ancient civilizations aur cosmos ke beech sambandh  
-    <br>• Earth aur humanity ke future scenarios  
-    <br>• Logical breakdown of popular space theories  
+    Is platform par hum:
+    <br>• Space aur universe ke scientific mysteries
+    <br>• Ancient civilizations aur cosmos ke sambandh
+    <br>• Earth aur humanity ke future scenarios
+    <br>• Popular theories ka logical breakdown
   </p>
 
   <p>
     Bramhand Rahasya ka objective sirf curiosity create karna nahi,
-    balki **knowledge, awareness aur rational thinking**
+    balki <b>knowledge, awareness aur rational thinking</b>
     ko promote karna hai.
   </p>
 </section>
-<h2 class="section-title">Latest Research Uploads</h2>
 
-<section class="video-grid">
-  <iframe 
-    class="yt-auto"
-    src="https://www.youtube.com/embed?listType=user_uploads&list=BRAMHANDRAHASYATV">
-  </iframe>
-</section>
 <!-- ================= VIDEOS ================= -->
 <h2 class="section-title" id="videos">Featured Research Videos</h2>
 
 <section class="video-grid">
 
   <div class="video-card">
-    <iframe src="https://www.youtube.com/embed/JMlWnvsH7ps" allowfullscreen></iframe>
-    <h3>THE GREAT SILENCE?</h3>
-    <p>Scientific exploration of cosmic boundaries and space expansion.</p>
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen></iframe>
+    <h3>Is the Universe Infinite?</h3>
+    <p>Scientific exploration of cosmic boundaries.</p>
   </div>
 
   <div class="video-card">
-    <iframe src="https://www.youtube.com/embed/ts_d0XdPDuU" allowfullscreen></iframe>
-    <h3>KUMARI KANDAM LOST CIVILIZATIONS</h3>
-    <p>The invisible force controlling galaxies.</p>
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" allowfullscreen></iframe>
+    <h3>Dark Matter Explained</h3>
+    <p>The invisible force shaping galaxies.</p>
   </div>
 
   <div class="video-card">
-    <iframe src="https://www.youtube.com/embed/ghzPOTjfWsU" allowfullscreen></iframe>
-    <h3>THE IMMORTAL CREATURE OF EARTH</h3>
-    <p>Predictions based on astrophysics and climate science.</p>
-  </div>
-
-  <div class="video-card">
-    <iframe src="https://www.youtube.com/embed/dQi0KUNTWR4" allowfullscreen></iframe>
-    <h3>TASHKENT AGREEMENT 1966</h3>
-    <p>How extreme gravity bends space-time itself.</p>
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" allowfullscreen></iframe>
+    <h3>Future of Earth</h3>
+    <p>Predictions based on astrophysics.</p>
   </div>
 
 </section>
@@ -340,30 +296,25 @@ footer{
 <!-- ================= FOOTER ================= -->
 <footer>
   <p>© 2026 Bramhand Rahasya | Independent Cosmic Research</p>
-
   <div class="social">
-    <a href="https://youtube.com/@bramhandrahasyatv?si=rgFi0f3PIad8w4WJ">YouTube</a>
-    <a href="https://www.instagram.com/bramhandrahasya?igsh=MXZ2MzdvdHk1OTRiaw==">Instagram</a>
-    <a href="https://www.facebook.com/bramhandrahasya">Facebook</a>
-    <a href="https://x.com/bramhandrahasya">X</a>
+    <a href="https://youtube.com">YouTube</a>
+    <a href="https://instagram.com">Instagram</a>
+    <a href="https://facebook.com">Facebook</a>
+    <a href="https://twitter.com">X</a>
   </div>
 </footer>
 
+<!-- ================= SLIDER SCRIPT ================= -->
+<script>
+let slides = document.querySelectorAll(".slide");
+let index = 0;
+
+setInterval(() => {
+  slides[index].classList.remove("active");
+  index = (index + 1) % slides.length;
+  slides[index].classList.add("active");
+}, 5000);
+</script>
+
 </body>
 </html>
-<section class="big-blog">
-  <h2>Our Mission</h2>
-
-  <p>
-    Bramhand Rahasya ka mission hai universe aur reality
-    ke complex topics ko fear ya hype ke bina,
-    scientific logic aur historical context ke saath
-    public ke saamne rakhna.
-  </p>
-
-  <p>
-    Hum blindly kisi theory ko push nahi karte.
-    Har claim ko data, research aur rational thinking
-    ke saath analyze karte hain.
-  </p>
-</section>
