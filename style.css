@@ -137,3 +137,8 @@ footer{
   font-size:14px;
   color:#9bb0ff;
 }
+.yt-auto{
+  width:100%;
+  height:450px;
+  border:1px solid #0b1d3a;
+}
