@@ -96,3 +96,17 @@ footer{
 .details li{
   margin:10px 0;
 }
+.big-blog{
+  max-width:1000px;
+  margin:80px auto;
+  padding:40px;
+  background:#000814;
+  border:1px solid #0b1d3a;
+  line-height:1.8;
+}
+
+.big-blog h2{
+  font-size:32px;
+  margin-bottom:20px;
+  color:#cfd9ff;
+}
