@@ -1,8 +1,12 @@
 body{
   margin:0;
-  font-family: 'Segoe UI', sans-serif;
-  background:#050b1a;
+  font-family:'Segoe UI', sans-serif;
   color:#ffffff;
+  background:
+    linear-gradient(rgba(2,6,23,0.9),rgba(2,6,23,0.9)),
+    url("https://images.unsplash.com/photo-1446776811953-b23d57bd21aa");
+  background-size:cover;
+  background-attachment:fixed;
 }
 
 .top{
