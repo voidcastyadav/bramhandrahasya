@@ -71,3 +71,24 @@ footer{
   background:#000814;
   color:#9bb0ff;
 }
+.video-box, .details{
+  max-width:900px;
+  margin:50px auto;
+  padding:20px;
+  background:#000814;
+  border:1px solid #0b1d3a;
+}
+
+.video-box h2, .details h2{
+  margin-bottom:15px;
+  color:#cfd9ff;
+}
+
+.details ul{
+  list-style:none;
+  padding:0;
+}
+
+.details li{
+  margin:10px 0;
+}
