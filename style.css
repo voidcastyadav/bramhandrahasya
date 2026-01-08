@@ -142,3 +142,57 @@ footer{
   height:450px;
   border:1px solid #0b1d3a;
 }
+.hero-slider{
+  position:relative;
+  height:85vh;
+  overflow:hidden;
+}
+
+.slide{
+  position:absolute;
+  inset:0;
+  background-size:cover;
+  background-position:center;
+  opacity:0;
+  transition:opacity 1.2s ease-in-out;
+}
+
+.slide.active{
+  opacity:1;
+}
+
+.overlay{
+  height:100%;
+  background:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.85));
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px;
+}
+
+.overlay h1{
+  font-size:56px;
+  letter-spacing:4px;
+}
+
+.overlay p{
+  margin-top:10px;
+  font-size:18px;
+  color:#9bb0ff;
+}
+
+.hero-btns{
+  margin-top:25px;
+}
+
+.hero-btns a{
+  display:inline-block;
+  margin:0 10px;
+  padding:12px 26px;
+  border:1px solid #5b7cff;
+  color:#fff;
+  text-decoration:none;
+  font-size:14px;
+}
