@@ -253,3 +253,49 @@ img{
   height:600px;
   border:none;
 }
+
+/* -------- DAILY POST SECTION -------- */
+.daily-post{
+  max-width:1100px;
+  margin:60px auto;
+  padding:30px;
+  background:#000814;
+  border:1px solid #0b1d3a;
+}
+
+.daily-head{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  margin-bottom:20px;
+}
+
+.daily-head h2{
+  margin-left:12px;
+  font-size:24px;
+  color:#cfd9ff;
+}
+
+.dot{
+  width:6px;
+  height:6px;
+  background:#9bb0ff;
+  border-radius:50%;
+}
+
+.daily-card h3{
+  font-size:20px;
+  margin-bottom:10px;
+  color:#ffffff;
+}
+
+.daily-card p{
+  font-size:15px;
+  color:#dfe3ff;
+  margin-bottom:12px;
+}
+
+.daily-card a{
+  font-size:14px;
+  color:#9bb0ff;
+}
