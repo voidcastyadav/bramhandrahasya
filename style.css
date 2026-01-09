@@ -299,3 +299,12 @@ img{
   font-size:14px;
   color:#9bb0ff;
 }
+.today{
+  background:#0b1d3a;
+  padding:8px 10px;
+  border-radius:6px;
+}
+
+.today strong{
+  color:#9bb0ff;
+}
