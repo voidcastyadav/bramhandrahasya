@@ -2,149 +2,269 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<title>Bramhand Rahasya | Cosmic Research Platform</title>
 
-<title>Bramhand Rahasya | Cosmic Research & Space Mysteries</title>
-
-<meta name="description" content="Bramhand Rahasya is an independent cosmic research platform exploring universe mysteries, space research, daily updates, videos and scientific analysis.">
-
+<meta name="description" content="Bramhand Rahasya is an independent cosmic research platform sharing daily space updates, research, blogs and videos with scientific analysis.">
 <meta name="keywords" content="bramhand rahasya, space mysteries, cosmic research, universe secrets, space science hindi">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="index, follow">
 
-<link rel="stylesheet" href="style.css">
+<style>
+/* ================= RESET ================= */
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:'Segoe UI', Arial, sans-serif;
+  background:#020617;
+  color:#ffffff;
+  line-height:1.8;
+}
+
+/* ================= HEADER ================= */
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:#000814;
+  border-bottom:1px solid #0b1d3a;
+  padding:14px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.logo{
+  font-size:18px;
+  letter-spacing:3px;
+  font-weight:bold;
+}
+nav a{
+  color:#cfd9ff;
+  margin-left:25px;
+  text-decoration:none;
+  font-size:14px;
+}
+
+/* ================= HERO SLIDER ================= */
+.hero{
+  position:relative;
+  height:80vh;
+  overflow:hidden;
+}
+.slide{
+  position:absolute;
+  inset:0;
+  background-size:cover;
+  background-position:center;
+  opacity:0;
+  transition:opacity 1.2s ease;
+}
+.slide.active{opacity:1;}
+
+.hero-overlay{
+  height:100%;
+  background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.85));
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px;
+}
+.hero-overlay h1{
+  font-size:48px;
+  letter-spacing:4px;
+}
+.hero-overlay p{
+  margin-top:10px;
+  color:#9bb0ff;
+}
+
+/* ================= 3 DOTS HORIZONTAL STATUS ================= */
+.status-bar{
+  max-width:1100px;
+  margin:40px auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:15px;
+  padding:20px;
+  background:#000814;
+  border:1px solid #0b1d3a;
+}
+.status{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:14px;
+}
+.dot{
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:#9bb0ff;
+}
+
+/* ================= SPACE GRID ================= */
+.space-grid{
+  max-width:1200px;
+  margin:60px auto;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  padding:0 20px;
+}
+.space-grid img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border:1px solid #0b1d3a;
+}
+
+/* ================= FEATURED POST ================= */
+.featured{
+  grid-column:1/-1;
+  background:#000814;
+  border:1px solid #0b1d3a;
+  padding:30px;
+}
+.featured h3{
+  font-size:24px;
+  margin-bottom:10px;
+  color:#cfd9ff;
+}
+.featured p{
+  font-size:15px;
+  color:#dfe3ff;
+}
+.featured a{
+  display:inline-block;
+  margin-top:12px;
+  color:#9bb0ff;
+  text-decoration:none;
+}
+
+/* ================= INSTAGRAM LOOK SECTION ================= */
+.section-title{
+  text-align:center;
+  font-size:28px;
+  margin:80px 0 30px;
+  color:#cfd9ff;
+}
+.insta-grid{
+  max-width:1100px;
+  margin:0 auto 60px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+  padding:0 20px;
+}
+.insta-grid img{
+  width:100%;
+  border:1px solid #0b1d3a;
+}
+
+/* ================= FOOTER ================= */
+footer{
+  background:#000814;
+  border-top:1px solid #0b1d3a;
+  padding:30px;
+  text-align:center;
+  font-size:13px;
+  color:#9bb0ff;
+}
+
+/* ================= MOBILE ================= */
+@media(max-width:768px){
+  .hero-overlay h1{font-size:32px;}
+  .space-grid{grid-template-columns:1fr;}
+}
+</style>
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
 <header>
   <div class="logo">BRAMHAND RAHASYA</div>
   <nav>
-    <a href="#home">Home</a>
+    <a href="#">Home</a>
     <a href="videos.html">Videos</a>
     <a href="post.html">Research</a>
   </nav>
 </header>
 
-<!-- ================= HERO ================= -->
-<section class="hero-slider" id="home">
-
-  <div class="slide active"
-    style="background-image:url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa');">
-    <div class="overlay">
+<!-- ========== HERO SLIDER ========== -->
+<section class="hero">
+  <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa');">
+    <div class="hero-overlay">
       <h1>BRAMHAND RAHASYA</h1>
       <p>Exploring the Unknown Universe</p>
     </div>
   </div>
 
+  <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa');">
+    <div class="hero-overlay">
+      <h1>Cosmic Mysteries</h1>
+      <p>Nebula • Space • Reality</p>
+    </div>
+  </div>
+
+  <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564');">
+    <div class="hero-overlay">
+      <h1>Hidden Truths</h1>
+      <p>Beyond Human Perception</p>
+    </div>
+  </div>
 </section>
 
-<div class="status-item today">
-  <span class="dot"></span>
-  <strong>Today:</strong> <span id="today-text">Daily update loading…</span>
-</div>
-<!-- ================= DAILY STATUS BAR ================= -->
-<section class="daily-status">
-
-  <div class="status-item">
-    <span class="dot"></span>
-    <strong>Video:</strong> New cosmic mystery uploaded
-  </div>
-
-  <div class="status-item">
-    <span class="dot"></span>
-    <strong>Blog:</strong> Dark Matter research updated
-  </div>
-
-  <div class="status-item">
-    <span class="dot"></span>
-    <strong>Research:</strong> Cosmic anomaly analysis
-  </div>
-
+<!-- ========== STATUS BAR ========== -->
+<section class="status-bar">
+  <div class="status"><span class="dot"></span><strong>Video:</strong> New upload available</div>
+  <div class="status"><span class="dot"></span><strong>Blog:</strong> Daily research updated</div>
+  <div class="status"><span class="dot"></span><strong id="today"></strong></div>
 </section>
 
-<!-- ================= SPACE IMAGES + FEATURED POST ================= -->
+<!-- ========== SPACE GRID + FEATURED POST ========== -->
 <section class="space-grid">
-
-  <!-- 5 Space Images -->
-  <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa" alt="Nebula Space">
-  <img src="https://images.unsplash.com/photo-1476610182048-b716b8518aae" alt="Galaxy Cosmos">
-  <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564" alt="Stars Space">
+  <img src="https://images.unsplash.com/photo-1476610182048-b716b8518aae" alt="Cosmos">
   <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Universe">
-  <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa" alt="Cosmic Nebula">
+  <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa" alt="Nebula">
 
-  <!-- Featured Post -->
-  <div class="featured-post">
+  <div class="featured">
     <h3>Is Universe Hiding a Dark Structure?</h3>
     <p>
-      Latest space observations suggest ki universe sirf visible matter
-      se nahi bana. Dark matter aur unknown cosmic forces is structure
-      ko shape de rahe ho sakte hain.
+      Latest observations suggest ki universe sirf visible matter se
+      nahi bana. Dark matter aur unknown cosmic forces iski real
+      structure ko define karte hain.
     </p>
     <a href="post.html">Read Full Research →</a>
   </div>
-
 </section>
 
-<!-- ================= DAILY INSTAGRAM HIGHLIGHTS ================= -->
+<!-- ========== INSTAGRAM STYLE SECTION ========== -->
 <h2 class="section-title">Daily Instagram Updates</h2>
-
 <section class="insta-grid">
-
-  <a href="https://www.instagram.com/" target="_blank">
-    <img src="https://via.placeholder.com/400x400?text=Instagram+Post+1" alt="Instagram Post">
-  </a>
-
-  <a href="https://www.instagram.com/" target="_blank">
-    <img src="https://via.placeholder.com/400x400?text=Instagram+Post+2" alt="Instagram Post">
-  </a>
-
-  <a href="https://www.instagram.com/" target="_blank">
-    <img src="https://via.placeholder.com/400x400?text=Instagram+Post+3" alt="Instagram Post">
-  </a>
-
+  <img src="https://via.placeholder.com/400x400?text=Instagram+Post+1" alt="">
+  <img src="https://via.placeholder.com/400x400?text=Instagram+Post+2" alt="">
+  <img src="https://via.placeholder.com/400x400?text=Instagram+Post+3" alt="">
 </section>
 
-<!-- ================= BIG BLOG ================= -->
-<section class="big-blog">
-
-  <h2>The Bramhand Rahasya Research Initiative</h2>
-
-  <p>
-    Bramhand Rahasya ek independent cosmic research platform hai
-    jiska focus universe, space-time aur reality ke un aspects ko
-    scientifically aur logically explore karna hai jo abhi bhi
-    modern science ke liye unanswered hain.
-  </p>
-
-  <p>
-    Dark matter, dark energy, cosmic cycles aur space-time distortion
-    jaise concepts ye dikhate hain ki reality humari soch se kaafi
-    zyada complex hai. Ye platform sensational claims ke bajay
-    data-driven aur research-based approach follow karta hai.
-  </p>
-
-</section>
+<footer>
+  © 2026 Bramhand Rahasya | Independent Cosmic Research Platform
+</footer>
 
 <script>
+/* ===== AUTO SLIDER ===== */
+let slides = document.querySelectorAll('.slide');
+let i = 0;
+setInterval(()=>{
+  slides[i].classList.remove('active');
+  i = (i + 1) % slides.length;
+  slides[i].classList.add('active');
+}, 5000);
+
+/* ===== TODAY DATE ===== */
 const d = new Date();
-const options = { weekday:'long', year:'numeric', month:'long', day:'numeric' };
-document.getElementById('today-text').innerText =
-  `Updates for ${d.toLocaleDateString('en-US', options)}`;
+document.getElementById('today').innerText =
+  "Today: " + d.toDateString();
 </script>
-
-<!-- ================= FOOTER ================= -->
-<footer>
-  <p>© 2026 Bramhand Rahasya | Independent Cosmic Research Platform</p>
-
-  <div class="social">
-    <a href="https://youtube.com">bramhandrahasyatv</a>
-    <a href="https://instagram.com">bramhandrahasya</a>
-    <a href="https://facebook.com">bramhandrahasya</a>
-    <a href="https://x.com">bramhandrahasya</a>
-  </div>
-</footer>
 
 </body>
 </html>
