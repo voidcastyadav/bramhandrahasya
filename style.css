@@ -1,9 +1,9 @@
 /* =====================================================
-   BRAMHAND RAHASYA – FINAL PROFESSIONAL STYLE
-   SEO + PERFORMANCE OPTIMIZED
+   BRAMHAND RAHASYA – MASTER STYLE SHEET
+   Professional | SEO | Performance Optimized
    ===================================================== */
 
-/* -------- RESET & BASICS (SEO + SPEED) -------- */
+/* ========== RESET ========== */
 *{
   margin:0;
   padding:0;
@@ -16,57 +16,49 @@ html{
 
 body{
   font-family:'Segoe UI', Arial, sans-serif;
-  font-size:16px;
-  line-height:1.9;
+  background:#020617;
   color:#ffffff;
-  background:
-    linear-gradient(rgba(2,6,23,0.92),rgba(2,6,23,0.92)),
-    url("https://images.unsplash.com/photo-1446776811953-b23d57bd21aa");
-  background-size:cover;
-  background-attachment:fixed;
-  -webkit-font-smoothing:antialiased;
+  line-height:1.8;
 }
 
-/* -------- LINKS (UX + SEO) -------- */
+/* ========== LINKS ========== */
 a{
   color:#9bb0ff;
   text-decoration:none;
 }
-
 a:hover{
   text-decoration:underline;
 }
 
-/* -------- HEADER / NAVIGATION -------- */
+/* ========== HEADER / NAV ========== */
 header{
   position:sticky;
   top:0;
   z-index:1000;
   background:#000814;
   border-bottom:1px solid #0b1d3a;
+  padding:14px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
-header .logo{
+.logo{
   font-size:18px;
   letter-spacing:3px;
-  font-weight:700;
-  color:#ffffff;
-}
-
-nav{
-  display:flex;
-  gap:25px;
+  font-weight:bold;
 }
 
 nav a{
+  margin-left:25px;
   font-size:14px;
   color:#cfd9ff;
 }
 
-/* -------- HERO / THUMBNAIL -------- */
-.hero-slider{
+/* ========== HERO SLIDER ========== */
+.hero{
   position:relative;
-  height:85vh;
+  height:80vh;
   overflow:hidden;
 }
 
@@ -83,9 +75,9 @@ nav a{
   opacity:1;
 }
 
-.overlay{
+.hero-overlay{
   height:100%;
-  background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.85));
+  background:linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.85));
   display:flex;
   flex-direction:column;
   justify-content:center;
@@ -94,72 +86,152 @@ nav a{
   padding:20px;
 }
 
-.overlay h1{
-  font-size:52px;
+.hero-overlay h1{
+  font-size:48px;
   letter-spacing:4px;
-  margin-bottom:10px;
 }
 
-.overlay p{
-  font-size:18px;
+.hero-overlay p{
+  margin-top:10px;
+  font-size:16px;
   color:#9bb0ff;
 }
 
-/* -------- BUTTONS -------- */
-.hero-btns{
-  margin-top:25px;
+/* ========== STATUS BAR (3 DOTS HORIZONTAL) ========== */
+.status-bar{
+  max-width:1100px;
+  margin:40px auto;
+  padding:20px;
+  background:#000814;
+  border:1px solid #0b1d3a;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:15px;
 }
 
-.hero-btns a{
-  display:inline-block;
-  padding:12px 26px;
-  margin:0 8px;
-  border:1px solid #5b7cff;
+.status{
+  display:flex;
+  align-items:center;
+  gap:10px;
   font-size:14px;
-  color:#ffffff;
+  color:#dfe3ff;
 }
 
-/* -------- MAIN CONTENT / BLOG -------- */
+.dot{
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:#9bb0ff;
+}
+
+/* ========== SPACE IMAGE GRID ========== */
+.space-grid{
+  max-width:1200px;
+  margin:60px auto;
+  padding:0 20px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.space-grid img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border:1px solid #0b1d3a;
+}
+
+/* ========== FEATURED POST ========== */
+.featured{
+  grid-column:1/-1;
+  background:#000814;
+  border:1px solid #0b1d3a;
+  padding:30px;
+}
+
+.featured h3{
+  font-size:24px;
+  margin-bottom:10px;
+  color:#cfd9ff;
+}
+
+.featured p{
+  font-size:15px;
+  color:#dfe3ff;
+  margin-bottom:12px;
+}
+
+/* ========== SECTION TITLES ========== */
+.section-title{
+  text-align:center;
+  font-size:28px;
+  margin:80px 0 30px;
+  color:#cfd9ff;
+}
+
+/* ========== BIG BLOG / CONTENT ========== */
 .big-blog{
   max-width:1100px;
-  margin:70px auto;
-  padding:45px;
+  margin:60px auto;
+  padding:40px;
   background:#000814;
   border:1px solid #0b1d3a;
 }
 
 .big-blog h1{
   font-size:34px;
-  margin-bottom:25px;
+  margin-bottom:20px;
   color:#cfd9ff;
 }
 
 .big-blog h2{
-  font-size:28px;
+  font-size:26px;
   margin:40px 0 20px;
   color:#cfd9ff;
 }
 
 .big-blog p{
-  margin-bottom:18px;
   font-size:16px;
+  margin-bottom:18px;
   color:#e6eaff;
 }
 
-/* -------- SECTION TITLE -------- */
-.section-title{
-  text-align:center;
-  font-size:32px;
-  margin-top:80px;
+/* ========== BLOG LIST PAGE ========== */
+.blog-list{
+  max-width:1100px;
+  margin:60px auto;
+  padding:0 20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:25px;
+}
+
+.blog-card{
+  background:#000814;
+  border:1px solid #0b1d3a;
+  padding:25px;
+}
+
+.blog-card h2{
+  font-size:22px;
+  margin-bottom:10px;
   color:#cfd9ff;
 }
 
-/* -------- VIDEO GRID -------- */
+.blog-card p{
+  font-size:15px;
+  color:#dfe3ff;
+  margin-bottom:12px;
+}
+
+/* ========== VIDEO GRID ========== */
 .video-grid{
+  max-width:1200px;
+  margin:60px auto;
+  padding:0 20px;
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:35px;
-  padding:60px;
+  gap:30px;
 }
 
 .video-card{
@@ -175,8 +247,8 @@ nav a{
 }
 
 .video-card h3{
-  margin:12px 0 6px;
-  font-size:17px;
+  font-size:18px;
+  margin:10px 0 6px;
   color:#cfd9ff;
 }
 
@@ -185,126 +257,53 @@ nav a{
   color:#9bb0ff;
 }
 
-/* -------- FOOTER -------- */
+/* ========== INSTAGRAM LOOK GRID ========== */
+.insta-grid{
+  max-width:1100px;
+  margin:0 auto 60px;
+  padding:0 20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;
+}
+
+.insta-grid img{
+  width:100%;
+  border:1px solid #0b1d3a;
+}
+
+/* ========== FOOTER ========== */
 footer{
-  background:#000814;
-  border-top:1px solid #0b1d3a;
-  padding:35px 20px;
+  margin-top:80px;
+  padding:30px;
   text-align:center;
   font-size:13px;
+  background:#000814;
+  border-top:1px solid #0b1d3a;
   color:#9bb0ff;
 }
 
-.social{
-  margin-top:12px;
+/* ========== RESPONSIVE ========== */
+@media(max-width:900px){
+  .space-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
 }
 
-.social a{
-  margin:0 10px;
-  font-size:13px;
-  color:#9bb0ff;
-}
-
-/* -------- ACCESSIBILITY & SEO -------- */
-img{
-  max-width:100%;
-  height:auto;
-}
-
-/* -------- MOBILE OPTIMIZATION -------- */
-@media(max-width:768px){
-
-  .overlay h1{
-    font-size:34px;
+@media(max-width:600px){
+  header{
+    padding:12px 20px;
   }
 
-  .overlay p{
-    font-size:15px;
+  .hero-overlay h1{
+    font-size:32px;
+  }
+
+  .space-grid{
+    grid-template-columns:1fr;
   }
 
   .big-blog{
-    padding:30px;
+    padding:25px;
   }
-
-  .big-blog h1{
-    font-size:26px;
-  }
-
-  .section-title{
-    font-size:26px;
-  }
-
-  .video-grid{
-    padding:30px;
-  }
-}
-
-/* -------- INSTAGRAM SECTION -------- */
-.insta-section{
-  max-width:1100px;
-  margin:60px auto;
-  padding:30px;
-  background:#000814;
-  border:1px solid #0b1d3a;
-}
-
-.insta-frame{
-  width:100%;
-  height:600px;
-  border:none;
-}
-
-/* -------- DAILY POST SECTION -------- */
-.daily-post{
-  max-width:1100px;
-  margin:60px auto;
-  padding:30px;
-  background:#000814;
-  border:1px solid #0b1d3a;
-}
-
-.daily-head{
-  display:flex;
-  align-items:center;
-  gap:6px;
-  margin-bottom:20px;
-}
-
-.daily-head h2{
-  margin-left:12px;
-  font-size:24px;
-  color:#cfd9ff;
-}
-
-.dot{
-  width:6px;
-  height:6px;
-  background:#9bb0ff;
-  border-radius:50%;
-}
-
-.daily-card h3{
-  font-size:20px;
-  margin-bottom:10px;
-  color:#ffffff;
-}
-
-.daily-card p{
-  font-size:15px;
-  color:#dfe3ff;
-  margin-bottom:12px;
-}
-
-.daily-card a{
-  font-size:14px;
-  color:#9bb0ff;
-}
-.today{
-  background:#0b1d3a;
-  padding:8px 10px;
-  border-radius:6px;
-}
-
-.today strong{
-  color:#9bb0ff;
 }
